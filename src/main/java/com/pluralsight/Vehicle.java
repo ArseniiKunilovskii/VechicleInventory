@@ -10,7 +10,11 @@ public class Vehicle {
     public Vehicle() {
     }
     public Vehicle(int vehicleId, String makeModel, String color, int odometerReading, float price){
-
+        this.vehicleId = vehicleId;
+        this.makeModel = makeModel;
+        this.color = color;
+        this.odometerReading = odometerReading;
+        this.price = price;
     }
 
     public int getVehicleId() {
@@ -51,5 +55,16 @@ public class Vehicle {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vehicleId=" + vehicleId +
+                ", makeModel='" + makeModel + '\'' +
+                ", color='" + color + '\'' +
+                ", odometerReading=" + odometerReading +
+                ", price=" + price +
+                '}';
     }
 }
